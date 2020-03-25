@@ -25,7 +25,7 @@ SECRET_KEY = '36%u3oql6a3cfo4n@!s*wx*sn98=(*rxd+_3%6glcd0ga&!!1)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.oracena.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -117,5 +117,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
+MEDIA_ROOT = os.path.join(BASE_DIR,'static')
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
